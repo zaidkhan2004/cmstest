@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root","","cms_db"); 
+$conn = mysqli_connect("45.79.126.214", "cnejkyxsgu","QBtwamct8W","cnejkyxsgu"); 
 // Establishing Connection with Server..
 
 //$db = mysqli_select_db("cl28-a-moodl-smn", $conn); 
