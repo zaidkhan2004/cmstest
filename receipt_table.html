@@ -1,0 +1,139 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="4%">&nbsp;</td>
+    <td width="60%"></td>
+    <td width="4%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+<td align="center" valign="bottom"><br> 
+ <img src="images/logo.png" /><br></td>
+   <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"></td>
+    <td valign="top">';
+	
+                                           $sql= "select * from patients where patient_no = '$patient_no' ;";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            $counter = 1;
+	
+	echo '<table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" bgcolor="#CCCCCC"><strong>Payment Receipt</strong></td>
+      </tr>';
+	   while($row = mysqli_fetch_assoc($result)) {
+
+     echo '
+      <tr>
+        <td width="80%" align="left">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="30%">&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+          <tr>
+            <td>Patient No:</td>
+            <td>'.$row[patient_no].'</td>
+          </tr>
+          <tr>
+            <td width="30%"> Name:</td>
+            <td>'.$row['name'].'</td>
+            </tr>
+          <tr>
+            <td>Age:</td>
+            <td>'.$row['age'].'</td>
+            </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>'.$row['gender'].'</td>
+            </tr>
+          <tr>
+            <td>Contact:</td>
+            <td>'.$row['mobile_no'].'</td>
+          </tr>
+          <tr>
+            <td>Registration Date:</td>
+            <td>'.$row['reg_date'].'</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Payment Details</strong></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Description</strong></td>
+            <td><strong>Fee</strong></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Cups: ()</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>Consultation Fee:</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><strong>Total Charges:</strong></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            </tr>
+          </table></td>
+      </tr>
+      
+      ';
+	   } // end of while
+	   } else {
+          // do nothing
+               }
+	   
+    echo '</table>
+	<br />
+    <br /></td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>

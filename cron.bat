@@ -1,0 +1,1 @@
+E:\wamp\bin\php\php7.2.18\php.exe E:\wamp\www\cms\sms_reminder.php

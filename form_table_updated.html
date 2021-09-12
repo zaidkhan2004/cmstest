@@ -1,0 +1,384 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="4%">&nbsp;</td>
+    <td width="30%">&nbsp;</td>
+    <td width="2%">&nbsp;</td>
+    <td width="60%"></td>
+    <td width="4%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><img src="images/logo.png"></td>
+    <td>&nbsp;</td>
+	';
+	 while($row1 = mysqli_fetch_assoc($result1)) {
+		$temp_date = $row1['registration_date'] ;
+		$reg_date = date("d-m-Y", strtotime($temp_date));
+    echo '<td align="right" valign="bottom">Patient No: '.$patient_no.' <br> Gender: '.$patient_gender.' <br> Registration Date: '.$reg_date.'</td>';
+	 } // end of while
+    echo '<td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td valign="top"><table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="70%" align="left" bgcolor="#CCCCCC"><strong>Disease</strong></td>
+        <td width="15%" align="center" bgcolor="#CCCCCC"><strong>Yes</strong></td>
+        <td width="15%" align="center" bgcolor="#CCCCCC"><strong>No</strong></td>
+      </tr>
+      <tr>
+        <td>Hypertension</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Epilepsy</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Hypercholesterolemia</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>HIV</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Hepatitis</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>T.B</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Arthritis</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Osteoporosis</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Anemia</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Blood Thinning drug</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Allergies</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Dysmenorrhea</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>PCO</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Menopause</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Amenorrhea</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Pregnancy</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+      <br />
+      <table width="100%" border="2" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="70%" align="left" bgcolor="#CCCCCC"><strong>Addiction</strong></td>
+          <td width="15%" align="center" bgcolor="#CCCCCC"><strong>Yes</strong></td>
+          <td width="15%" align="center" bgcolor="#CCCCCC"><strong>No</strong></td>
+        </tr>
+        <tr>
+          <td>Smoking</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>Others</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+    </table>
+    <br>
+    <table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="2" align="center" bgcolor="#CCCCCC"><strong>Drugs In Use</strong></td>
+        </tr>
+      <tr>
+        <td width="50%">&nbsp;</td>
+        <td width="50%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+    <br />
+    <table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center" bgcolor="#CCCCCC"><strong>Patients History</strong></td>
+        </tr>
+      <tr>
+        <td width="80%"><p><br />
+          <strong>Points Repetition</strong> _____________ <strong>Times</strong></p>
+          <p><strong>Frequency</strong> __________________ <strong>Days</strong></p>
+          <p><br />
+            <br />
+          </p></td>
+        </tr>
+    </table>
+    <p>&nbsp;</p></td>
+    <td>&nbsp;</td>
+    <td valign="top">';
+	
+                                           $sql= "select * from patients where patient_no = '$patient_no' ;";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            $counter = 1;
+	
+	echo '<table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="2" align="center" bgcolor="#CCCCCC"><strong>Patients Information</strong></td>
+      </tr>';
+	   while($row = mysqli_fetch_assoc($result)) {
+
+     echo '<tr>
+        <td width="30%">Patients Name:</td>
+        <td>'.$row['name'].'</td>
+        </tr>
+      <tr>
+        <td>Age:</td>
+        <td>'.$row['age'].'</td>
+        </tr>
+      <tr>
+        <td>Contact:</td>
+        <td>'.$row['mobile_no'].'</td>
+        </tr>
+      <tr>
+        <td>Address:</td>
+        <td>'.$row['address'].'</td>
+      </tr>';
+	   } // end of while
+	   } else {
+          // do nothing
+               }
+	   
+    echo '</table>
+      <br />
+      <table width="100%" border="2" cellspacing="0" cellpadding="0">
+        <tr>
+        <td align="center" bgcolor="#CCCCCC"><strong>Diseases and Diagnosis</strong></td>
+      </tr>
+      <tr>
+        <td width="80%" height="28" align="center">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="28">&nbsp;</td>
+      </tr>
+      </table>
+    <br />
+    <table width="100%" border="2" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="8" align="center" bgcolor="#CCCCCC"><strong>Recommended Treatment Points</strong></td>
+        </tr>
+      <tr>
+        <td colspan="2" align="center"><strong>Front</strong></td>
+        <td colspan="2" align="center"><strong>Back</strong></td>
+        <td colspan="2" align="center"><strong>Head/Neck</strong></td>
+        <td colspan="2" align="center"><strong>Arms/Legs</strong></td>
+        </tr>
+      <tr>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+        <td width="12%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      </table>
+    <br />
+    <p>&nbsp;</p></td>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
