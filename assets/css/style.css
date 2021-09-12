@@ -1,0 +1,354 @@
+
+/* including themes css file 	*/
+@import url("mythemes.css");
+
+
+/*	login page css 	*/
+
+h1.fpages{
+	margin-top:40px;
+	margin-bottom:50px;
+}
+
+.login_box{
+	background-color:blue;
+	max-width:420px;
+	margin:0 auto;
+	background-color: white;
+	border-top:5px solid #33b5e5;
+}
+
+.login_box form{
+	margin:40px 30px 40px 30px;
+}
+
+
+
+.login_box p.fheading{
+	color:#33b5e5;
+	font-size:18px;
+	font-weight: 500;
+	margin-bottom:16px;
+}
+
+.login_box p.error_area{
+	margin:0;
+	padding:0;
+	margin-top:-4px;
+	margin-bottom:-20px;
+}
+
+.login_box .form-control{
+	margin-bottom: 20px;
+}
+
+/*	login page css end	*/
+
+.parsley_seperator,.parsley_seperator2,.parsley_seperator3.parsley_seperator4{
+	min-width: 100%;
+	display:block;
+	min-height: 12px;
+}
+
+.parsley_seperator2{
+	min-height:9px;
+}
+
+.parsley_seperator3{
+	min-height:4px;
+}
+
+.parsley_seperator4{
+	min-height:6px;
+
+}
+
+
+.currencyInputs input[type=number]{
+	background-image: url('../images/aed.png');
+	background-repeat: no-repeat;
+	background-position: right 10px center ;
+	padding-right:45px;
+}
+
+#imgPreviewArea{
+	display:none;
+}
+
+#imgPreview{
+	display:block;
+	height:150px;
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border:1px solid #2a3f54;
+}
+
+#small_screen_tabs{
+	margin-bottom: 20px;
+}
+
+#small_screen_tabs a{
+	height:40px;
+	line-height:25px;
+	vertical-align: center;
+}
+
+.myradioDistance{
+	margin-right:40px;
+}
+
+
+/* tab panel on small screen links */
+.mstLinks{
+	border-bottom:none;
+	border-radius: 0;
+}
+
+.mstLinks.active{
+	/*border-color:#2a3f54;*/
+	/*border-width: 2px;*/
+}
+
+.mstLinks.active:focus{
+	background-color: white;
+}
+
+.myinputlabels{
+	font-size:12px;
+}
+
+.myinputsizes{
+	/*height:34px;*/
+	/*font-size:14px;*/
+	height:26px;
+	font-size:12px;
+}
+
+
+.myformsizes label{
+	font-size:12px;
+}
+
+.myformsizes input,.myformsizes select{
+	/*height:34px;*/
+	/*font-size:14px;*/
+	height:26px;
+	font-size:12px;
+}
+
+.myformsizes select{
+	/*line-height:1px;*/
+	padding-top:4px;
+}
+
+.myformsizes{
+	font-size:12px;
+}
+
+.outline_section{
+	/*margin:5px;*/
+	border:1px solid #ddd;
+	border-left:none;
+	border-right:none;
+	padding:10px 5px;
+}
+
+.myborder1{
+	border-top:1px solid #ddd;
+	padding-top:10px;
+}
+
+.nobordertop{
+	border-top:none;
+	/*padding-top:20px;*/
+}
+
+
+.myformsizes .form-control-feedback{
+	top:-6px;
+	left:3px;
+}
+
+.myformsizes input[type=file]{
+	/*height:20px;*/
+	padding:0;
+	padding-top:2px;
+	padding-left:4px;
+	margin: 0;
+
+}
+
+/* for timepicker*/
+.myformsizes .bootstrap-timepicker .input-group-addon{
+	padding:2px 3px;
+	font-size: 10px;
+}
+
+.bootstrap-timepicker{
+	margin-right:10px;
+	/*margin-left:10px;*/
+
+}
+
+.myformsizes .timepicker1_class{
+	/*width:65px;*/
+	width:100%;
+	padding-left:4px;
+	/*margin-right:20px;*/
+}
+
+
+.nav-sm .myformsizes .timepicker1_class {
+	width:70px;
+}
+
+.myformsizes .timepicker{
+	/*max-width:30px !important;*/
+	/*overflow:hidden;*/
+}
+
+
+.lesstopmargin{
+	margin-top:-30px;
+}
+
+.notopborder{
+	border-top:none;
+}
+
+.nobottomborder{
+	border-bottom:none;
+}
+
+.file_response2{
+	padding:4px 0;
+	text-align:right;
+}
+
+
+.file_download_link{
+	text-decoration: underline;
+	display:none;
+}
+
+.download_link_span{
+	/*display:none;*/
+}
+
+
+#empForm2 h5{
+	margin-bottom:20px;
+}
+
+.mydatatable1 tr td{
+	vertical-align: middle !important;
+}
+
+.centered_top_pos{
+	width:600px;
+}
+
+
+.panel_overflow_x{
+	overflow-y:auto;
+}
+
+.table_noBottMarg{
+	margin-bottom:0px;
+}
+
+#DetailsTable td{
+	padding:7px 4px;
+	vertical-align: center;
+	line-height:20px;
+}
+
+#singleEmpName{
+	width:90px;
+	max-width:90px;
+	overflow-wrap: break-word;
+}
+
+
+.timepicker1_class{
+	/*width:90%;*/
+	/*float:left;*/
+}
+
+
+.bootstrap-timepicker .input-group-addon{
+	/*float:left;*/
+	/*width:30px;*/
+	/*height:30px;*/
+}
+
+#create_report{
+	/*cursor:not-allowed;*/
+}
+
+#holiday_alert{
+	display:none;
+}
+
+
+#sch_sel_td select{
+	min-width:100px !important;
+	/*background-color:blue;*/
+}
+
+
+.myCalendar{
+	width:700px;
+	margin:0 auto;
+}
+
+.cal-width{
+	width:13%;
+	margin: 0;
+	padding: 0;
+	display:inline-block;
+	text-align:center;
+}
+
+.holiday_btns{
+
+	margin: 1px !important;
+	padding: 1px !important;
+	width:40px;
+	text-align:center;
+
+}
+
+#holiday_form table td{
+	margin: 0;
+	padding: 0px;
+}
+
+.password_field{
+	position:relative;
+
+}
+
+.password_show_hide{
+	background-color: #33b5e5;
+	color:white;
+	cursor:pointer;
+	padding:5px 7px;
+	font-size:11px;
+	text-align:center;
+	border-radius:3px;
+	position:absolute;
+	right:14px;
+	top:28px;
+	display:none;
+}
+
+.password_show_hide:hover{
+	background-color: #1E99C7;
+}
+#user_full_name_ua{
+	padding-top:7px;
+	float:left;
+	padding-bottom:15px;
+	font-weight:bold;
+}

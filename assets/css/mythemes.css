@@ -1,0 +1,38 @@
+
+
+/* Colors */
+
+/*mycolor1 (blue) : #33b5e5*/
+/*admin panel theme gray : #2a3f54*/ 
+
+/* Body Themes */
+
+.body_theme1{
+	background-color:#e9e9e9;
+	color:#666666;
+}
+
+
+/* Button Themes */
+
+.btn-theme1{
+	background-color: #33b5e5;
+	color:white;
+	border:none;
+}
+
+/* Input Themes*/
+
+
+/* no border radius and smaller foont*/
+input.input_theme1{
+	font-family:arial;
+	font-size:13.33px;
+	border-radius: 0px;
+
+}
+
+input.input_theme1:focus{
+	box-shadow: none;
+	border-color: #33b5e5;
+}
