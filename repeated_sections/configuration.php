@@ -10,10 +10,10 @@
 	function connect2(){
 
 		// Database parameters
-	    $servername = "localhost";
-	    $username = "root";
-	    $password = "";
-	    $dbname = "cms_db";
+	    $servername = "45.79.126.214";
+	    $username = "cnejkyxsgu";
+	    $password = "QBtwamct8W";
+	    $dbname = "cnejkyxsgu";
 	    
 	    global $conn2;
     	$conn2 = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
